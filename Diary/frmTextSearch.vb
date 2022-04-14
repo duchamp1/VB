@@ -114,9 +114,8 @@ Public Class frmTextSearch
     End Sub
 
     Private Sub openForm()
-        '▼データ取得
+        'データ取得
         Dim Cn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & DBNAME & "")
-        'Dim Cn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\MIRO\My Document\DIARY\DiaryDB.mdb")
         Dim SQLCm As OleDbCommand = Cn.CreateCommand
         Dim Adapter As New OleDbDataAdapter(SQLCm)
         Dim Table As New DataTable
@@ -124,14 +123,8 @@ Public Class frmTextSearch
         SQLCm.CommandText = "SELECT * FROM Diary ORDER BY DATE"
         Adapter.Fill(Table)
 
-        '▼値の表示
+        '値の表示
         DataGridView1.DataSource = Table
-
-        ''▼後処理
-        'Table.Dispose()
-        'Adapter.Dispose()
-        'SQLCm.Dispose()
-        'Cn.Dispose()
 
     End Sub
 

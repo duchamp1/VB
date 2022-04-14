@@ -84,7 +84,6 @@ Public Class frmMain
 
     End Sub
 
-    '2015/07/26 新規追加
     '「明日へ」ボタン
     Private Sub cmdtomorrow_Click(sender As Object, e As EventArgs) Handles cmdtomorrow.Click
 
@@ -103,10 +102,7 @@ Public Class frmMain
         Dim cn As New OleDb.OleDbConnection
 
         Try
-            '2018/09/15 UPDATE START
             If String.IsNullOrEmpty(txtSchedule.Text) AndAlso String.IsNullOrEmpty(txtDiary.Text) Then
-                'If txtSchedule.Text = "" And txtDiary.Text = "" Then
-                '2018/09/15 UPDATE END
                 MsgBox("入力してください。", vbExclamation, TITLE)
                 txtSchedule.Focus()
                 Exit Sub

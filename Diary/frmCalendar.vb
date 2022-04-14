@@ -9,8 +9,6 @@ Public Class frmCalendar
         Dim dispDate As Date = CDate(frmMain.txtDate.Text)
 
         Calendar1.SetDate(dispDate)
-        '¡“ú‚Ì“ú•t‚ğİ’è
-        'Calendar1.SetDate(Today)
 
     End Sub
 

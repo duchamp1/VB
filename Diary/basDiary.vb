@@ -24,13 +24,6 @@ Module basDiary
 
     End Sub
 
-    'Public Function CalcGridIndex(ByVal gd As Object, ByVal c As Integer, ByVal r As Long) As Long
-
-    '    '** グリッドインデックス計算
-    '    CalcGridIndex = c + gd.Cols * r
-
-    'End Function
-
     Public Sub ListField()
         LIST(0) = "NO"
         LIST(1) = "DATE"
