@@ -13,10 +13,25 @@
 '2020/12/16 テキストエリアを広げる
 '2021/04/28 フォームを画面のセンターに表示するように更新
 '           Gitにアップロード
-
+'2022/10/07 INIファイル読込処理と二重起動チェック処理を追加
 Public Class frmMain
 
     Private Sub frmMain_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+
+        'Iniファイル名設定
+        gsIniPath = My.Application.Info.DirectoryPath & "\" & INIFILENAME
+
+        'IniFile読み込み
+        If FnGetIniFileInfo() = False Then
+            '異常終了
+            End
+        End If
+
+        ' 二重起動チェック
+        If FnUpcheck() = False Then
+            '異常終了
+            End
+        End If
 
         With txtDate
             .Text = CStr(Today)

@@ -115,7 +115,7 @@ Public Class frmTextSearch
 
     Private Sub openForm()
         'ÉfÅ[É^éÊìæ
-        Dim Cn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & DBNAME & "")
+        Dim Cn As New OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & gDBName & "")
         Dim SQLCm As OleDbCommand = Cn.CreateCommand
         Dim Adapter As New OleDbDataAdapter(SQLCm)
         Dim Table As New DataTable
