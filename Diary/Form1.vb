@@ -27,6 +27,13 @@ Public Class frmMain
             End
         End If
 
+        'DBファイル存在確認
+        If FnFileget(gDBName) = False Then
+            MsgBox("MDBファイルが存在しません。", vbCritical, TITLE)
+            '異常終了
+            End
+        End If
+
         ' 二重起動チェック
         If FnUpcheck() = False Then
             '異常終了
